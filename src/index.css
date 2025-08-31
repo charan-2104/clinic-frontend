@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:wght@400&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-highlight-pearl text-secondary-charcoal;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-accent-gold hover:bg-accent-gold/90 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-200 hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-accent-gold focus:ring-offset-2 transform;
+  }
+  
+  .btn-secondary {
+    @apply bg-primary-ivory hover:bg-primary-ivory/90 text-secondary-charcoal font-semibold py-4 px-8 rounded-lg transition-all duration-200 hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-accent-gold focus:ring-offset-2 border border-accent-gold;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-accent-gold text-accent-gold hover:bg-accent-gold hover:text-white font-semibold py-4 px-8 rounded-lg transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-accent-gold focus:ring-offset-2;
+  }
+  
+  .section-padding {
+    @apply py-20 px-4 sm:px-6 lg:px-8;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto;
+  }
+  
+  .card {
+    @apply bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 border border-neutral-1/20 backdrop-blur-sm;
+  }
+
+  .card-premium {
+    @apply bg-gradient-to-br from-white to-highlight-pearl rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 border border-accent-gold/20 backdrop-blur-sm;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-accent-gold to-optional-dusty-rose bg-clip-text text-transparent;
+  }
+
+  .text-gradient-luxury {
+    @apply bg-gradient-to-r from-accent-gold via-optional-dusty-rose to-accent-gold bg-clip-text text-transparent;
+  }
+
+  .glass-effect {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+
+  .luxury-shadow {
+    box-shadow: 0 20px 40px rgba(212, 175, 55, 0.1);
+  }
+
+  .gold-border {
+    @apply border-l-4 border-accent-gold;
+  }
+
+  .hover-lift {
+    @apply transition-all duration-200 hover:-translate-y-2 hover:shadow-2xl;
+  }
+
+  .stagger-animation {
+    animation-delay: calc(var(--stagger-index) * 0.05s);
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out;
+  }
+  
+  .animate-slide-in-left {
+    animation: slideInLeft 0.5s ease-out;
+  }
+  
+  .animate-slide-in-right {
+    animation: slideInRight 0.5s ease-out;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.4s ease-out;
+  }
+
+  .animate-float {
+    animation: float 2s ease-in-out infinite;
+  }
+
+  .animate-glow {
+    animation: glow 1.5s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px #D4AF37;
+  }
+  100% {
+    box-shadow: 0 0 15px #D4AF37, 0 0 25px #D4AF37;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D4AF37;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #BFA6A0;
+}

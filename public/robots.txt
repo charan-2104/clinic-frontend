@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://drakhilasaesthetics.com/sitemap.xml
+
+# Disallow admin areas
+Disallow: /admin
+Disallow: /admin/*
+
+# Allow all other content
+Allow: /css/
+Allow: /js/
+Allow: /images/
+Allow: /assets/
