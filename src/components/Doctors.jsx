@@ -14,7 +14,7 @@ const Doctors = () => {
   const staticDoctors = [
     {
       _id: '1',
-      name: 'Dr. K.Akhila Sai ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎',
+      name: '‎ ‎ ‎Dr. K.Akhila Sai ‎ ‎',
       degree: 'Founder and Director',
       expertise: '‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎',
       experience: '5+ years',
@@ -40,7 +40,7 @@ const Doctors = () => {
       _id: '4',
       name: 'Dr.R.Aravind Reddy',
       degree: 'MBBS, MD (DVL)',
-      expertise: '‎ ‎ ‎ ‎ Consultant Doctor ‎ ‎ ‎ ‎ ‎ ‎ ‎‎ ‎‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎',
+      expertise: '‎ ‎ ‎ ‎ Consultant Doctor ‎ ‎ ‎ ‎ ‎ ‎ ‎‎',
       experience: '3+ years',
       img: 'https://res.cloudinary.com/dwneh65hw/image/upload/v1753721620/doctors/doctor-1753721618739-919958953.png',
     },
