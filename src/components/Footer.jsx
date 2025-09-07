@@ -131,7 +131,6 @@ const Footer = () => {
                 'Laser Therapy', 
                 'Anti-Aging',
                 'Chemical Peel',
-                'Botox & Fillers',
                 'Hair Restoration'
               ].map((service) => (
                 <li key={service}>
