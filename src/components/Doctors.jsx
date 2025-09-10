@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import { Award, Star, MessageCircle, Calendar, Users } from 'lucide-react';
+import { gtagReportConversion } from '../utils/gtag';
 
 const Doctors = () => {
   const [doctors, setDoctors] = useState([]);
@@ -71,8 +72,9 @@ const Doctors = () => {
     setTimeout(fetchDoctors, 50);
   }, []);
 
+ const whatsappUrl =   "https://wa.me/919063271426?text=Hi%20Akhilas%20Aesthetics%2C%20I%20have%20a%20query";
   const handleWhatsAppClick = () => {
-    window.open(`https://wa.me/919505985010?text=Hi%20Dr.Akhila's%20Aesthetics%2C%20I%20have%20a%20query`,'_blank');
+    gtagReportConversion(whatsappUrl);
   };
 
   const displayDoctors = doctors;

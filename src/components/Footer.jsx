@@ -1,13 +1,14 @@
 import { motion } from 'framer-motion';
 import { MapPin, Phone, Mail, Instagram, Youtube, Linkedin, ArrowUp, MessageCircle } from 'lucide-react';
+import { gtagReportConversion } from '../utils/gtag';
 
 const Footer = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
-
+ const whatsappUrl =   "https://wa.me/919063271426?text=Hi%20Akhilas%20Aesthetics%2C%20I%20have%20a%20query";
   const handleWhatsAppClick = () => {
-    window.open(`https://wa.me/919063271426?text=Hi%20Akhilas%20Aesthetics%2C%20I%20have%20a%20query`,'_blank');
+    gtagReportConversion(whatsappUrl);
   };
 
   const handleQuickLinkClick = (e, sectionName) => {

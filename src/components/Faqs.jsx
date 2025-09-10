@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import { ChevronDown, MessageCircle, Phone, Mail } from 'lucide-react';
+import { gtagReportConversion } from '../utils/gtag';
 
 const Faqs = ({ onFaqsLoaded }) => {
   const [faqs, setFaqs] = useState([]);
@@ -84,8 +85,9 @@ const Faqs = ({ onFaqsLoaded }) => {
     fetchFaqs();
   }, [onFaqsLoaded]);
 
+ const whatsappUrl =   "https://wa.me/919063271426?text=Hi%20Akhilas%20Aesthetics%2C%20I%20have%20a%20query";
   const handleWhatsAppClick = () => {
-    window.open(`https://wa.me/919505985010?text=Hi%20Dr.Akhila's%20Aesthetics%2C%20I%20have%20a%20query`,'_blank');
+    gtagReportConversion(whatsappUrl);
   };
 
   const containerVariants = {

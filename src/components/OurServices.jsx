@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Sparkles, ArrowRight, ArrowLeft, Star, Clock, Users } from 'lucide-react';
+import { gtagReportConversion } from '../utils/gtag';
 
 const useScrollAnimation = () => ({
   ref: React.useRef(),
@@ -35,6 +36,11 @@ useEffect(() => {
   window.addEventListener('resize', handleResize);
   return () => window.removeEventListener('resize', handleResize);
 }, [cardsPerView]);
+
+  const whatsappUrl ="https://wa.me/919063271426?text=Hi%20Akhilas%20Aesthetics%2C%20I%20have%20a%20query";
+  const handleWhatsAppClick = () => {
+      gtagReportConversion(whatsappUrl);
+  };
 
   const API_URL = import.meta.env.VITE_API_URL;
   useEffect(() => {
@@ -453,7 +459,7 @@ useEffect(() => {
                   Book a consultation with our expert dermatologists and aesthetic specialists to create a personalized treatment plan just for you.
                 </p>
                 <button 
-                  onClick={() => window.open(`https://wa.me/919505985010?text=Hi%20Dr.Akhila's%20Aesthetics%2C%20I%20have%20a%20query`,'_blank')}
+                  onClick={handleWhatsAppClick}
                   className="font-bold py-4 px-10 rounded-full shadow-lg transition-all duration-300 text-lg group transform hover:scale-105 hover:shadow-xl"
                   style={{ 
                     background: 'linear-gradient(135deg, #D4AF37 0%, #DCAE96 100%)',

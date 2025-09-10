@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, MessageCircle, Sparkles } from 'lucide-react';
+import { gtagReportConversion } from '../utils/gtag';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -45,12 +46,11 @@ const Navbar = () => {
     { href: '#contact', label: 'Contact' },
   ];
 
+ const whatsappUrl =   "https://wa.me/919063271426?text=Hi%20Akhilas%20Aesthetics%2C%20I%20have%20a%20query";
   const handleWhatsAppClick = () => {
-    window.open(
-      `https://wa.me/919505985010?text=Hi%20Dr.Akhila's%20Aesthetics%2C%20I%20have%20a%20query`,
-      '_blank'
-    );
+    gtagReportConversion(whatsappUrl);
   };
+  
 
   const handleNavClick = (e, href) => {
   e.preventDefault(); 
